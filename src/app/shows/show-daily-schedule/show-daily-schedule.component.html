@@ -1,0 +1,26 @@
+<!-- Date Header -->
+<div class="page-header">
+  <div class="pull-left">
+    {{selectedDate | date:'fullDate'}}
+  </div>
+  <div class="pull-right"></div>
+  <div class="clearfix"></div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <div class="list-group">
+      <a href="#" class="list-group-item clearfix" *ngFor="let show of shows"> 
+        <div class="media-body">
+          <h4 class="list-group-item-heading">{{show.name}}</h4>
+          <p class="list-group-item-text">{{show.episodeTitle}} - {{show.season}}x{{show.episode}}</p>
+          <br>
+          <p class="list-group-item-text">{{show.synopsis}}</p>
+        </div>
+        <div class="media-right">
+          <img class="poster" [src]="show.poster" alt="show">
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
